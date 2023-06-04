@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 1%;
+    background-color: gray;
+}
+
+/* Header */
+
+.header{
+    padding: 60px;
+    color: gray;
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+}
+
+.header img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Navigation Bar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(51, 51, 51, 0.801);
+    position: sticky;
+    top: 0;
+}
+
+.navbar a{
+    color: whitesmoke;
+    padding: 16px 40px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: rgb(32, 32, 32);
+    text-decoration: underline;
+}
+
+/* Gallery */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Article */
+
+.news{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.side{
+    flex: 30%;
+    max-width: 30%;
+    background-color: rgb(63, 63, 63);
+    color: whitesmoke;
+    padding: 20px;
+}
+
+.main{
+    flex: 70%;
+    max-width: 70%;
+    background-color: whitesmoke;
+    color: rgb(63, 63, 63);
+    padding: 20px;
+}
+
+.news img{
+    vertical-align: middle;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.news p, .news h2{
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(63, 63, 63);
+    color: whitesmoke;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 30px;
+}
+
+.copyright a{
+    padding: 0 20px;
+    color: whitesmoke;
+}
+
+.copyright a:hover{
+    background-color: whitesmoke;
+    color: rgb(63, 63, 63);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+    .navbar {   
+        flex-direction: column;
+        position: relative;
+      }
+    .news{
+        flex-direction: column;
+    }
+    .side, .main{
+        flex: 100%;
+        max-width: 100%;
+    }
+  }
+  
+@media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+
+    .header img{
+        display:none;
+    }
+  }
